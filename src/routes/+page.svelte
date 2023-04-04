@@ -1,6 +1,5 @@
 <script lang="ts">
     import {base} from '$app/paths'
-    import layout from "./+layout.svelte";
 </script>
 
 <layout>
