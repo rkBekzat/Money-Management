@@ -13,10 +13,10 @@ The Money Management application allows users to view their transactions in a si
 In summary, the Money Management application is a frontend project designed to help users manage their finances. It allows users to register, perform CRUD operations for transactions, and view their transactions in a user-friendly interface. With this application, users can easily track their income and expenses, and stay on top of their finances.
 
 ## Tools:
+
 Framework: Svelte, ts
 
 Backend: Django
-
 
 # create-svelte
 

@@ -3,9 +3,22 @@
 	export let form: ActionData;
 </script>
 
+<div class="container">
+	<h1>Login or Register</h1>
+	<form method="post">
+		<input type="text" placeholder="Username" name="username" required />
+		<input type="password" placeholder="Password" name="password" required />
+		{#if form?.errorMessage}
+			<div class="has-text-danger">{form.errorMessage}</div>
+		{/if}
+		<button type="submit" formaction="?/register">Register</button>
+		<button class="is-primary" type="submit" formaction="?/login">Login</button>
+	</form>
+</div>
+
 <style>
 	.container {
-        background-color: skyblue;
+		background-color: skyblue;
 		background-size: cover;
 		color: #fff;
 		display: flex;
@@ -55,16 +68,3 @@
 		margin-top: 0.5rem;
 	}
 </style>
-
-<div class="container">
-	<h1>Login or Register</h1>
-	<form method="post">
-		<input type="text" placeholder="Username" name="username" required />
-		<input type="password" placeholder="Password" name="password" required />
-		{#if form?.errorMessage}
-			<div class="has-text-danger">{form.errorMessage}</div>
-		{/if}
-		<button type="submit" formaction="?/register">Register</button>
-		<button class="is-primary" type="submit" formaction="?/login">Login</button>
-	</form>
-</div>
