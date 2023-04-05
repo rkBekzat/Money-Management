@@ -14,6 +14,7 @@ In summary, the Money Management application is a frontend project designed to h
 
 ## Tools:
 Framework: Svelte, ts
+
 Backend: Django
 
 
