@@ -105,4 +105,8 @@
         background-color: #f4f4f4;
     }
 
+    .header-button {
+        color: #f4f4f4;
+        margin-right: 10px;
+    }
 </style>
