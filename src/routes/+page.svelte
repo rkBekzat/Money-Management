@@ -1,3 +1,10 @@
+<script>
+    import TransactionForm from "../lib/transaction_form.svelte";
+</script>
+
+
+<TransactionForm />
+
 <script lang="ts">
     import {base} from '$app/paths'
 </script>
