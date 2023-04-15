@@ -7,14 +7,14 @@
 </script>
 
 <th>
-	<span on:click={() => sortBy(column)}>
+	<button on:click={() => sortBy(column)}>
 		{column}
 		{#if sort.column === column && sort.asc}
 			<i class="fa-solid fa-sort-up fa-fade"></i>
 		{:else if sort.column === column}
 			<i class="fa-solid fa-sort-down fa-fade"></i>
 		{/if}
-	</span>
+	</button>
 </th>
 
 <style>

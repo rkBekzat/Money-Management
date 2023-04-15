@@ -1,13 +1,14 @@
 <script>
 	let isUser = false;
 	let dropdownOpen = false;
+	let header;
 
 	function toggleDropdown() {
 		dropdownOpen = !dropdownOpen;
 	}
 </script>
 
-<header class="header-container">
+<header class="header-container" bind:this={header}>
 	<div class="header-left">
 		<img src="%sveltekit.assets%/favicon.png" alt="Logo" class="header-logo" />
 		<span class="header-title">Money Management</span>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { transactions } from '../../lib/History/history.ts';
+	import { transactions } from '../../lib/history/getTransactions.ts';
 	import TableHeader from '../../lib/History/TableHeader.svelte';
 
 	let show_transactions = transactions;
@@ -32,6 +32,7 @@
 				);
 				cmp = dateA - dateB;
 			}
+			else if (sort.column === 'Description') cmp = a.description.localeCompare(b.description);
 			return sort.asc ? cmp : -cmp;
 		});
 	}
@@ -46,7 +47,6 @@
 	<div class="table-filtersss">
 		<i class="fa-solid fa-filter-circle-dollar fa-xl"></i>
 	</div>
-	<i class="fa-regular fa-filters"></i>
 	<table>
 		<thead>
 			<tr>
@@ -68,7 +68,7 @@
 					<td>
 						{#each transaction.tags as tag}<span>{tag}</span>{/each}
 					</td>
-					<td class="description">{transaction.description || '-'}</td>
+					<td class="description">{transaction.description}</td>
 				</tr>
 			{/each}
 		</tbody>

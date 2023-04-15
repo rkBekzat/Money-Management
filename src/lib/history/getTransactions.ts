@@ -4,7 +4,7 @@ interface Transaction {
 	amount: number;
 	tags: string[];
 	date: string;
-	description?: string;
+	description: string;
 }
 
 // TODO Make interface for Tags
@@ -16,7 +16,8 @@ export const transactions: Transaction[] = [
 		type: 'expense',
 		amount: 1499,
 		tags: ['Personal', 'Food'],
-		date: '10.01.2023'
+		date: '10.01.2023',
+		description: '-'
 	},
 	{
 		name: 'Salon',
@@ -31,7 +32,8 @@ export const transactions: Transaction[] = [
 		type: 'expense',
 		amount: 900,
 		tags: ['Personal', 'Food'],
-		date: '15.01.2023'
+		date: '15.01.2023',
+		description: '-'
 	},
 	{
 		name: 'Shopping',
