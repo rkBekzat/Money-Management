@@ -43,7 +43,7 @@
 		align-items: center;
 		padding: 16px;
 		background-color: black;
-		color: white;
+		color: silver;
 		font-family: 'Kanit', sans-serif;
 		font-size: 20px;
 	}
@@ -72,7 +72,7 @@
 
 	.header-link {
 		margin-left: 24px;
-		color: #fff;
+		color: silver;
 		text-decoration: none;
 		cursor: pointer;
 	}
@@ -100,7 +100,7 @@
 
 	.header-dropdown-link {
 		display: block;
-		color: white;
+		color: silver;
 		text-decoration: none;
 		padding: 5px;
 	}
@@ -111,7 +111,7 @@
 	}
 
 	.header-button {
-		color: #f4f4f4;
+		color: silver;
 		margin-right: 10px;
 	}
 </style>

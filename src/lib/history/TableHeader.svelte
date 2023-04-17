@@ -18,6 +18,10 @@
 </th>
 
 <style>
+	button {
+		all: unset;
+	}
+
 	th {
 		padding: 12px 15px;
 		text-align: left;

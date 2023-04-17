@@ -1,13 +1,5 @@
-interface Transaction {
-	name: string;
-	type: 'income' | 'expense';
-	amount: number;
-	tags: string[];
-	date: string;
-	description: string;
-}
+import type { Transaction } from "../../lib/history/types";
 
-// TODO Make interface for Tags
 // TODO Edit Date format
 
 export const transactions: Transaction[] = [
