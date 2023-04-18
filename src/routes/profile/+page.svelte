@@ -1,4 +1,7 @@
 <script lang="ts">
+  import Chart from '$lib/charts/pie.svelte'; 
+  import Line from '$lib/charts/line.svelte';     
+
   let name : string = "";
   let surname : string = "";
   let email : string = "";
@@ -17,7 +20,8 @@
   </div>
 
   <div class="charts">
-
+    <Chart/>
+    <Line/>
   </div>
 
 </div>
@@ -34,6 +38,7 @@
   }
 
   .information {
+    height: 300px;
     border: 2px black;
     border-style: solid;
     border-radius: 10px;
