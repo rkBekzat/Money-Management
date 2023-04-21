@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Pie } from 'svelte-chartjs';
 
   import {
@@ -12,27 +12,13 @@
 
   ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale);
 
+  export let numbers : number[]; 
+  export let names : string[];
   var data = {
-  labels: ['Red', 'Green', 'Yellow', 'Grey', 'Dark Grey'],
+  labels: names,
   datasets: [
     {
-      data: [300, 50, 100, 40, 120],
-      backgroundColor: [
-        '#F7464A',
-        '#46BFBD',
-        '#FDB45C',
-        '#949FB1',
-        '#4D5360',
-        '#AC64AD',
-      ],
-      hoverBackgroundColor: [
-        '#FF5A5E',
-        '#5AD3D1',
-        '#FFC870',
-        '#A8B3C5',
-        '#616774',
-        '#DA92DB',
-      ],
+      data: numbers,
     },
   ],
 };

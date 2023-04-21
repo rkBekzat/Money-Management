@@ -3,16 +3,17 @@
     import Chart from 'chart.js/auto';
   
     let chart: any;
-  
+    export let names : string[];
+    export let numbers : number[];
     onMount(() => {
       const ctx : any = (document.getElementById('myChart') as HTMLCanvasElement).getContext('2d');
       chart = new Chart(ctx, {
         type: 'line',
         data: {
-          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+          labels: names,
           datasets: [{
             label: 'Sales',
-            data: [12, 19, 3, 5, 2, 3, 8],
+            data: numbers,
             fill: false,
             borderColor: 'rgb(75, 192, 192)',
             tension: 0.1

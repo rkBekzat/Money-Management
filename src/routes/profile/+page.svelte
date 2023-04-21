@@ -20,8 +20,8 @@
   </div>
 
   <div class="charts">
-    <Chart/>
-    <Line/>
+    <Chart numbers={[300, 50, 100, 40, 120]} names={['Red', 'Green', 'Yellow', 'Grey', 'Dark Grey']} />
+    <Line names={['January', 'February', 'March', 'April', 'May', 'June', 'July']} numbers={[12, 19, 3, 5, 2, 3, 8]} />
   </div>
 
 </div>
