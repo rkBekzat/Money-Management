@@ -1,24 +1,24 @@
 <script lang="ts">
 	import type { ActionData } from './$types';
 	export let form: ActionData;
-</script>
 
-<div class="container">
-	<h1>Login or Register</h1>
-	<form method="post">
-		<input type="text" placeholder="Username" name="username" required />
-		<input type="password" placeholder="Password" name="password" required />
-		{#if form?.errorMessage}
-			<div class="has-text-danger">{form.errorMessage}</div>
-		{/if}
-		<button type="submit" formaction="?/register">Register</button>
-		<button class="is-primary" type="submit" formaction="?/login">Login</button>
-	</form>
-</div>
+    let password:string = "";
+    let passwordConfirmation:string = "";
+    let passwordsMatch: boolean = true;
+    
+    function validatePassword() {
+        passwordsMatch = password === passwordConfirmation;
+        if (password === passwordConfirmation) {
+            console.log("Passwords match");
+        } else {
+            console.log("Passwords don't match");
+        }
+    }
+</script>
 
 <style>
 	.container {
-		background-color: skyblue;
+        background-color: skyblue;
 		background-size: cover;
 		color: #fff;
 		display: flex;
@@ -67,21 +67,24 @@
 		font-size: 0.875rem;
 		margin-top: 0.5rem;
 	}
-	.container {
-		padding: 1rem;
-	}
 </style>
 
 <div class="container">
-	<h1>Login</h1>
+	<h1>Register</h1>
 	<form method="post">
 		<input type="text" placeholder="Email" name="email" required />
-		<input type="password" placeholder="Password" name="password" required />
+		<input type="password" bind:value={password} placeholder="Password" name="password" required />
 		{#if form?.errorMessage}
 			<div class="has-text-danger">{form.errorMessage}</div>
 		{/if}
-		<button class="is-primary" type="submit" formaction="?/login">Login</button>
-		<a href="/signup" class="ifthecase">If you don't have account, register new account!</a>
+        <input type="password" bind:value={passwordConfirmation} placeholder="Password confirmation" name="password" required />
+		{#if form?.errorMessage}
+			<div class="has-text-danger">{form.errorMessage}</div>
+		{/if}
+        <button on:click={validatePassword} type="submit" formaction="?/register">Register</button>
+        {#if !passwordsMatch}
+            <p style="color: red;">Passwords don't match</p>
+        {/if}
 	</form>
 </div>
 

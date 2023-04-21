@@ -7,10 +7,9 @@
 		dropdownOpen = !dropdownOpen;
 	}
 </script>
-
 <header class="header-container" bind:this={header}>
 	<div class="header-left">
-		<img src="%sveltekit.assets%/favicon.png" alt="Logo" class="header-logo" />
+    <img src="favicon.png" alt="Logo" class="header-logo">
 		<span class="header-title">Money Management</span>
 	</div>
 	<nav class="header-nav">
