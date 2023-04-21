@@ -20,6 +20,11 @@ export interface Transaction {
   description: string;
 }
 
+export interface dateType {
+  from: null | Date;
+  to: null | Date;
+}
+
 // TODO Catch tags from db
 export const Tags = ['Personal', 'Food', 'Clothes', 'University', 'Other', 'Job', 'Household', 'Games', 'Entertainment'];
 // sadfioirjgoseijvsifd idk how to solve it

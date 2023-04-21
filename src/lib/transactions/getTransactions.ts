@@ -1,4 +1,4 @@
-import type { Transaction } from "../../lib/history/types";
+import type { Transaction } from "../types";
 
 // TODO Edit Date format
 
@@ -50,5 +50,53 @@ export const transactions: Transaction[] = [
 		tags: ['Personal', 'University'],
 		date: '25.02.2023',
 		description: 'OOOOOOOOOOOOOOO thx God'
+	},
+	{
+		name: 'Lorem',
+		type: 'expense',
+		amount: 1,
+		tags: [],
+		date: '19.09.1999',
+		description: 'Lorem'
+	},
+	{
+		name: 'Prize',
+		type: 'income',
+		amount: 2000,
+		tags: ['Personal', 'University', 'Sport'],
+		date: '10.04.2023',
+		description: 'Tournament prize'
+	},
+	{
+		name: 'Shaurma',
+		type: 'expense',
+		amount: 9000,
+		tags: ['Personal', 'Food'],
+		date: '17.04.2023',
+		description: 'Very good'
+	},
+	{
+		name: 'Kinopoisk',
+		type: 'expense',
+		amount: 300,
+		tags: ['Personal', 'Entertainment'],
+		date: '01.01.2023',
+		description: 'Avatar 2'
+	},
+	{
+		name: 'Yandex Music',
+		type: 'expense',
+		amount: 990,
+		tags: ['Personal', 'Entertainment'],
+		date: '29.12.2022',
+		description: 'Music subscription for year'
+	},
+	{
+		name: 'Macbook',
+		type: 'expense',
+		amount: 100000,
+		tags: ['Personal', 'Household'],
+		date: '01.01.2053',
+		description: 'New MacBook'
 	}
 ];

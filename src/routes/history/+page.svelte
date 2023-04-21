@@ -1,17 +1,9 @@
 <script lang="ts">
-  import { transactions } from "../../lib/history/getTransactions.ts";
+  import { transactions } from "../../lib/transactions/getTransactions.ts";
   import TableHeader from "../../lib/History/TableHeader.svelte";
   import FilterDropdown from "../../lib/history/FilterDropdown.svelte";
-  import type { Filter, Transaction } from "../../lib/history/types";
-
-  function toDate (a: string): Date {
-    const dateParts: string[] = a.split(".");
-    return new Date(
-      Number(dateParts[2]),
-      Number(dateParts[1]) - 1,
-      Number(dateParts[0])
-    );
-  }
+  import type { Filter, Transaction } from "../../lib/types";
+  import { toDate } from "../../lib/transactions/date";
 
   let show_transactions: Transaction[] = transactions;
 
@@ -23,8 +15,9 @@
       sort.column = column;
       sort.asc = true;
     }
-    sorting()
+    sorting();
   }
+
   function sorting() {
     show_transactions = show_transactions.sort((a, b) => {
       let cmp = 0;
@@ -37,28 +30,30 @@
     });
   }
 
-  let filter: Filter = { type: null, amount: {from: null, to: null}, tags: [], date: {from: null, to: null} };
+  let filter: Filter = { type: null, amount: { from: null, to: null }, tags: [], date: { from: null, to: null } };
   let filterOpen = false;
+
   function toggleFilter() {
     filterOpen = !filterOpen;
   }
+
   function filterBy(f: Filter) {
     show_transactions = transactions;
     if (f.type != null)
-      show_transactions = show_transactions.filter(a => a.type === f.type)
+      show_transactions = show_transactions.filter(a => a.type === f.type);
     if (f.amount.from != null && f.amount.to != null)
-      show_transactions = show_transactions.filter(a => a.amount >= f.amount.from && a.amount <= f.amount.to)
+      show_transactions = show_transactions.filter(a => a.amount >= f.amount.from && a.amount <= f.amount.to);
     else if (f.amount.from != null)
-      show_transactions = show_transactions.filter(a => a.amount >= f.amount.from)
+      show_transactions = show_transactions.filter(a => a.amount >= f.amount.from);
     else if (f.amount.to != null)
-      show_transactions = show_transactions.filter(a => a.amount <= f.amount.to)
+      show_transactions = show_transactions.filter(a => a.amount <= f.amount.to);
     if (f.tags.length)
       show_transactions = show_transactions.filter(a => {
         for (const tag of f.tags)
           if (!a.tags.includes(tag))
             return false;
         return true;
-      })
+      });
     if (f.date.from != null && f.date.to != null)
       show_transactions = show_transactions.filter(a => toDate(a.date) >= toDate(<string>f.date.from) && toDate(a.date) <= toDate(<string>f.date.to));
     if (f.date.from != null)
@@ -80,7 +75,7 @@
       <button on:click={toggleFilter}>
         <i class="fa-solid fa-filter-circle-dollar fa-xl"></i>
       </button>
-      <FilterDropdown on:change={() => filterBy(filter)} filter={filter} visible={filterOpen}/>
+      <FilterDropdown on:change={() => filterBy(filter)} filter={filter} visible={filterOpen} />
     </div>
   </div>
   <table>

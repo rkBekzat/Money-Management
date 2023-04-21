@@ -1,8 +1,9 @@
 <script lang="ts">
   import { createEventDispatcher } from "svelte";
-  import type { Filter } from "./types";
-  import { Tags } from "./types";
+  import type { Filter } from "../types";
+  import { Tags } from "../types";
   import CustomInput from "./CustomInput.svelte";
+  import { isDate } from "../transactions/date";
 
   export let filter: Filter;
   export let visible = false;
@@ -10,16 +11,6 @@
   let errorDate = false;
 
   const dispatch = createEventDispatcher();
-
-  function isDate (a: string): boolean {
-    const dateParts: string[] = a.split(".");
-    let date = new Date(
-      Number(dateParts[2]),
-      Number(dateParts[1]) - 1,
-      Number(dateParts[0])
-    )
-    return isFinite(+date);
-  }
 
   function typeClick(type) {
     if (filter.type != null)
@@ -47,6 +38,8 @@
     errorAmount = false;
     errorAmount = (filter.amount.to < 0 || filter.amount.from < 0 ||
       (filter.amount.to < filter.amount.from && filter.amount.to != null && filter.amount.from != null));
+    if (errorAmount)
+      filter.amount.from = filter.amount.to = null;
     dispatch("change", filter);
   }
 
@@ -60,6 +53,8 @@
       errorDate = !isDate(filter.date.from);
     if (!errorDate && filter.date.to != null)
       errorDate = !isDate(filter.date.to);
+    if (errorDate)
+      filter.date.from = filter.date.to = null;
     dispatch("change", filter);
   }
 
