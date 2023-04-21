@@ -92,17 +92,3 @@
     }
 </style>
   
-
-<!-- 
-.image-container {
-    width: 500px; /* Set the width of the container to the desired size */
-    height: 300px; /* Set the height of the container to the desired size */
-    overflow: hidden; /* Hide any part of the image that is larger than the container */
-}
-
-.image-container img {
-    width: 100%; /* Make the width of the image fill the container */
-    height: auto; /* Keep the aspect ratio of the image */
-    object-fit: cover; /* Scale the image while preserving its aspect ratio */
-}
- -->

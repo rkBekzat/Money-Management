@@ -1,16 +1,15 @@
 <script>
-    import TransactionForm from "$lib/transaction_form.svelte";
+	import TransactionForm from '$lib/transaction_form.svelte';
 </script>
 
-
 <div id="form">
-    <TransactionForm />
+	<TransactionForm />
 </div>
 
 <style>
-    #form {
-        margin: 100px;
-        display: flex;
-        justify-content: center;
-    }
+	#form {
+		margin: 100px;
+		display: flex;
+		justify-content: center;
+	}
 </style>
