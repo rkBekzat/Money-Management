@@ -9,18 +9,19 @@
 
 <header class="header-container">
     <div class="header-left">
-        <img src="%sveltekit.assets%/favicon.png" alt="Logo" class="header-logo">
+        <img src="favicon.png" alt="Logo" class="header-logo">
         <span class="header-title">Money Management</span>
     </div>
     <nav class="header-nav">
         <a href="/" class="header-link">Home</a>
         <a href="/profile" class="header-link">Profile</a>
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
         <div class="header-dropdown" on:click={toggleDropdown}>
             <span class="header-link">Dropdown</span>
             {#if dropdownOpen}
                 <div class="header-dropdown-menu">
-                    <a href="/add" class="header-dropdown-link">Add Transaction</a>
-                    <a href="/history" class="header-dropdown-link">History</a>
+                    <a href="add" class="header-dropdown-link">Add Transaction</a>
+                    <a href="history" class="header-dropdown-link">History</a>
                 </div>
             {/if}
         </div>
