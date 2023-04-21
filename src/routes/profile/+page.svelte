@@ -74,8 +74,8 @@
 
   .charts {
     flex: 4
-  }
-</style>
+  } 
+  
 	button {
 		width: 40%;
 	}
