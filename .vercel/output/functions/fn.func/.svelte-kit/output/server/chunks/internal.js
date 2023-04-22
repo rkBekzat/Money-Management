@@ -107,7 +107,7 @@ const options = {
   root: Root,
   service_worker: false,
   templates: {
-    app: ({ head, body, assets: assets2, nonce, env }) => '<!DOCTYPE html>\r\n<html lang="en">\r\n	<head>\r\n		<meta charset="utf-8" />\r\n		<link rel="icon" href="favicon.png" />\r\n		<meta name="viewport" content="width=device-width" />\r\n		<script src="https://kit.fontawesome.com/4f59a92907.js" crossorigin="anonymous"><\/script>\r\n		<link rel="preconnect" href="https://fonts.googleapis.com">\r\n		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\r\n		<link href="https://fonts.googleapis.com/css2?family=Kanit&family=Mukta&family=Russo+One&display=swap" rel="stylesheet">\r\n		' + head + '\r\n	</head>\r\n	<body data-sveltekit-preload-data="hover">\r\n		<div style="display: contents">' + body + "</div>\r\n	</body>\r\n</html>\r\n",
+    app: ({ head, body, assets: assets2, nonce, env }) => '<!DOCTYPE html>\r\n<html lang="en">\r\n	<head>\r\n		<meta charset="utf-8" />\r\n		<!-- <link rel="icon" href="favicon.png" /> -->\r\n		<meta name="viewport" content="width=device-width" />\r\n		<script src="https://kit.fontawesome.com/4f59a92907.js" crossorigin="anonymous"><\/script>\r\n		<link rel="preconnect" href="https://fonts.googleapis.com">\r\n		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\r\n		<link href="https://fonts.googleapis.com/css2?family=Kanit&family=Mukta&family=Russo+One&display=swap" rel="stylesheet">\r\n		' + head + '\r\n	</head>\r\n	<body data-sveltekit-preload-data="hover">\r\n		<div style="display: contents">' + body + "</div>\r\n	</body>\r\n</html>\r\n",
     error: ({ status, message }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
 		<style>
@@ -168,7 +168,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "1uecok7"
+  version_hash: "zwjmdw"
 };
 function get_hooks() {
   return {};

@@ -1,13 +1,13 @@
 import { c as create_ssr_component, b as add_attribute, v as validate_component } from "../../chunks/index.js";
 const Header_svelte_svelte_type_style_lang = "";
 const css$2 = {
-  code: ".header-container.svelte-1qbugkx{display:flex;justify-content:space-between;align-items:center;padding:16px;background-color:black;color:silver;font-family:'Kanit', sans-serif;font-size:20px}.header-left.svelte-1qbugkx{display:flex;align-items:center}.header-logo.svelte-1qbugkx{width:32px;height:32px;margin-right:8px}.header-title.svelte-1qbugkx{font-weight:bold}.header-nav.svelte-1qbugkx{display:flex;align-items:center}.header-link.svelte-1qbugkx{margin-left:24px;color:silver;text-decoration:none;cursor:pointer}.header-link.svelte-1qbugkx:hover{text-decoration:underline}.header-dropdown.svelte-1qbugkx{position:relative}.header-dropdown-menu.svelte-1qbugkx{position:absolute;width:80%;left:18px;z-index:1;background-color:#333333;border:1px solid gray;padding:5px;margin-top:5px;border-radius:10px;gap:5px}.header-dropdown-link.svelte-1qbugkx{display:block;color:silver;text-decoration:none;padding:5px}.header-dropdown-link.svelte-1qbugkx:hover{background-color:#222222;border-radius:5px}.header-button.svelte-1qbugkx{color:silver;margin-right:10px}",
+  code: ".header-container.svelte-1qbugkx{display:flex;justify-content:space-between;align-items:center;padding:16px;background-color:black;color:silver;font-family:'Kanit', sans-serif;font-size:20px}.header-left.svelte-1qbugkx{display:flex;align-items:center}.header-title.svelte-1qbugkx{font-weight:bold}.header-nav.svelte-1qbugkx{display:flex;align-items:center}.header-link.svelte-1qbugkx{margin-left:24px;color:silver;text-decoration:none;cursor:pointer}.header-link.svelte-1qbugkx:hover{text-decoration:underline}.header-dropdown.svelte-1qbugkx{position:relative}.header-dropdown-menu.svelte-1qbugkx{position:absolute;width:80%;left:18px;z-index:1;background-color:#333333;border:1px solid gray;padding:5px;margin-top:5px;border-radius:10px;gap:5px}.header-dropdown-link.svelte-1qbugkx{display:block;color:silver;text-decoration:none;padding:5px}.header-dropdown-link.svelte-1qbugkx:hover{background-color:#222222;border-radius:5px}.header-button.svelte-1qbugkx{color:silver;margin-right:10px}",
   map: null
 };
 const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let header;
   $$result.css.add(css$2);
-  return `<header class="header-container svelte-1qbugkx"${add_attribute("this", header, 0)}><div class="header-left svelte-1qbugkx"><img src="favicon.png" alt="Logo" class="header-logo svelte-1qbugkx">
+  return `<header class="header-container svelte-1qbugkx"${add_attribute("this", header, 0)}><div class="header-left svelte-1qbugkx">
 		<span class="header-title svelte-1qbugkx">Money Management</span></div>
 	<nav class="header-nav svelte-1qbugkx"><a href="/" class="header-link svelte-1qbugkx">Home</a>
 		<a href="/profile" class="header-link svelte-1qbugkx">Profile</a>
