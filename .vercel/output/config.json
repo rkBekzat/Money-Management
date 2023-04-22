@@ -2,6 +2,72 @@
 	"version": 3,
 	"routes": [
 		{
+			"src": "/about/",
+			"dest": "/about"
+		},
+		{
+			"src": "/about",
+			"status": 308,
+			"headers": {
+				"Location": "/about/"
+			}
+		},
+		{
+			"src": "/add/",
+			"dest": "/add"
+		},
+		{
+			"src": "/add",
+			"status": 308,
+			"headers": {
+				"Location": "/add/"
+			}
+		},
+		{
+			"src": "/history/",
+			"dest": "/history"
+		},
+		{
+			"src": "/history",
+			"status": 308,
+			"headers": {
+				"Location": "/history/"
+			}
+		},
+		{
+			"src": "/login/",
+			"dest": "/login"
+		},
+		{
+			"src": "/login",
+			"status": 308,
+			"headers": {
+				"Location": "/login/"
+			}
+		},
+		{
+			"src": "/profile/",
+			"dest": "/profile"
+		},
+		{
+			"src": "/profile",
+			"status": 308,
+			"headers": {
+				"Location": "/profile/"
+			}
+		},
+		{
+			"src": "/signup/",
+			"dest": "/signup"
+		},
+		{
+			"src": "/signup",
+			"status": 308,
+			"headers": {
+				"Location": "/signup/"
+			}
+		},
+		{
 			"src": "/_app/immutable/.+",
 			"headers": {
 				"cache-control": "public, immutable, max-age=31536000"
@@ -15,5 +81,27 @@
 			"dest": "/fn"
 		}
 	],
-	"overrides": {}
+	"overrides": {
+		"index.html": {
+			"path": ""
+		},
+		"about/index.html": {
+			"path": "about"
+		},
+		"add/index.html": {
+			"path": "add"
+		},
+		"history/index.html": {
+			"path": "history"
+		},
+		"login/index.html": {
+			"path": "login"
+		},
+		"profile/index.html": {
+			"path": "profile"
+		},
+		"signup/index.html": {
+			"path": "signup"
+		}
+	}
 }
